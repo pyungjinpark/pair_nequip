@@ -500,12 +500,12 @@ void PairNEQUIP::compute(int eflag, int vflag){
       vatom[i][0] +=  atomic_virial[i][0][0]; // xx
       vatom[i][1] +=  atomic_virial[i][1][1]; // yy 
       vatom[i][2] +=  atomic_virial[i][2][2]; // zz
-      vatom[i][3] +=  0.5*(atomic_virial[i][0][1]+atomic_virial[i][1][0]); // xy
-      vatom[i][4] +=  0.5*(atomic_virial[i][0][2]+atomic_virial[i][2][0]); // xz
-      vatom[i][5] +=  0.5*(atomic_virial[i][1][2]+atomic_virial[i][2][1]); // yz
-      //vatom[i][6] +=  atomic_virial[i][1][0]; // yx
-      //vatom[i][7] +=  atomic_virial[i][2][0]; // zx
-      //vatom[i][8] +=  atomic_virial[i][2][1]; // zy
+      vatom[i][3] +=  atomic_virial[i][0][1]; // xy
+      vatom[i][4] +=  atomic_virial[i][0][2]; // xz
+      vatom[i][5] +=  atomic_virial[i][1][2]; // yz
+      vatom[i][6] +=  atomic_virial[i][1][0]; // yx
+      vatom[i][7] +=  atomic_virial[i][2][0]; // zx
+      vatom[i][8] +=  atomic_virial[i][2][1]; // zy
     }
    } // Allow the use of the atomic viral. - Added by Hongyu Yu
 
