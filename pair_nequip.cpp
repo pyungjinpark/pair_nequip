@@ -509,6 +509,7 @@ void PairNEQUIP::compute(int eflag, int vflag){
     }
    } // Allow the use of the atomic viral. - Added by Hongyu Yu
 
+//Pyungjin Park fixed it
 
   if(debug_mode){
     std::cout << "NequIP model output:\n";
